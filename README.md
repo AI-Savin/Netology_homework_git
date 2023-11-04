@@ -54,7 +54,7 @@
 В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.  
 
 ### Решение 2
-[**ссылка на коммит .gitignore**](https://github.com/AI-Savin/first_github/commit/bf685c2ad465055ed58d3bc2318b338b68029cd5)
+[**ссылка на коммит .gitignore**](https://github.com/AI-Savin/first_github/commit/21ff6a2e7932e2be65023e9c84102a572bfd6fed)
 
 ---
 
