@@ -52,29 +52,20 @@
 4. Приложите в файл README.md текст использованных команд в GitHub 
 
 ### Решение 2
-[**ссылка на коммит .gitignore**](https://github.com/AI-Savin/first_github/commit/21ff6a2e7932e2be65023e9c84102a572bfd6fed)
 
----
+![zabbix_agents](https://github.com/AI-Savin/Netology_hw_8.02/blob/main/img/zabbix_agents.png)  
+![zabbix_logs_vm2](https://github.com/AI-Savin/Netology_hw_8.02/blob/main/img/log_zabbix_agent_vm2.png)  
+![zabbix_logs_vm3](https://github.com/AI-Savin/Netology_hw_8.02/blob/main/img/log_zabbix_agent_vm3.png)  
+![zabbix_agents_monitor](https://github.com/AI-Savin/Netology_hw_8.02/blob/main/img/zabbix_agents_monitor.png)  
 
-### Задание 3
+**команды**  
 
-**Что нужно сделать:**
-
-1. Создайте новую ветку dev и переключитесь на неё.
-2. Создайте в ветке dev файл test.sh с произвольным содержимым.
-3. Сделайте несколько коммитов и пушей в ветку dev, имитируя активную работу над файлом в процессе разработки.
-4. Переключитесь на основную ветку.
-5. Добавьте файл main.sh в основной ветке с произвольным содержимым, сделайте комит и пуш . Так имитируется продолжение общекомандной разработки в основной ветке во время разработки отдельного функционала в dev ветке.
-6. Сделайте мердж dev ветки в основную с помощью `git merge dev`. Напишите осмысленное сообщение в появившееся окно комита.
-7. Сделайте пуш в основной ветке.
-8. Не удаляйте ветку dev.
-В качестве ответа прикрепите ссылку на граф коммитов https://github.com/ваш-логин/ваш-репозиторий/network в ваш md-файл с решением.
-
-Ваш граф комитов должен выглядеть аналогично скриншоту:
-
-![скрин для Git](https://github.com/netology-code/sdvps-homeworks/assets/77622076/e73589cf-7e97-40e5-ac01-d1d55376f1b9)  
-
-
-### Решение 3
-
-[**ссылка на график коммитов**](https://github.com/AI-Savin/first_github/network)
+`wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-5+debian12_all.deb`  
+`sudo dpkg -i zabbix-release_6.0-5+debian12_all.deb`  
+`sudo apt update`  
+`sudo systemctl status zabbix-agent`  
+`sudo find / -name zabbix_agentd.conf`  
+`sudo sed -i 's/Server=127.0.0.1/Server=192.168.3.9/g' /etc/zabbix/zabbix_agentd.conf`  
+`sudo systemctl restart zabbix-agent`  
+`sudo systemctl status zabbix-agent`  
+`sudo tail -f /var/log/zabbix/zabbix_agentd.log`  
